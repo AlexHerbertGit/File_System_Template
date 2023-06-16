@@ -21,7 +21,7 @@ class PatientRecord {
   function loadRecords() {
     try {
         const data = fs.readFileSync('src/records.json'); //File directory must be the location of your JSON file, the current one is just an example.
-        records = JSON.parse(data);
+        records = JSON.parse(data); //This declares the variable that will contain what ever loaded you loaded from the JSON file. This example was populating a global variable in the main block of code.
     } catch (error) {
         //Handles file read errors or empty file
         console.error('Error loading records:', error.message);
